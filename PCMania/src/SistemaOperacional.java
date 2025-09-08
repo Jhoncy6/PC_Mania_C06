@@ -7,6 +7,16 @@ public class SistemaOperacional {
         this.tipo = tipo;
     }
 
+    public SistemaOperacional(){}
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
     public String getNome() {
         return nome;
     }
