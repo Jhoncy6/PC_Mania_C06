@@ -13,15 +13,9 @@ public class Computador {
         }
     }
 
-    public String getMarca() {
-        return marca;
+    public float getPreco() {
+        return preco;
     }
-
-    public MemoriaUSB getMemoriaUSB() {
-        return memoriaUSB;
-    }
-
-
 
     public HardwareBasico[] getHardwares() {
         return hardwares;
@@ -43,8 +37,5 @@ public class Computador {
     }
 
 
-    public void addMemoriaUSB(HardwareBasico hardware) {
-
-    }
 
 }

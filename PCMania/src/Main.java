@@ -13,12 +13,11 @@ public class Main {
         System.out.println("Qual é o seu CPF?");
         String c1Cpf = leitor.nextLine();
         Cliente cliente1 = new Cliente(c1Nome, c1Cpf);
-        System.out.println("Olá" + c1Nome + "Abaixo está a nossa seleção de computadores na promoção!");
-        System.out.println("Para escolher as prmoções, basta digitar o número de cada uma. Se quiser digite 0 ");
+        System.out.println("Olá " + c1Nome + " Abaixo está a nossa seleção de computadores na promoção!");
+        System.out.println("Para escolher as prmoções, basta digitar o número de cada uma. Se quiser sair digite 0 ");
 
         System.out.println("================== Promoção 01 ===============");
         Computador c1 = new Computador("Apple", 475);
-        
         c1.getHardwares()[0].setNome("Pentium Core i3");
         c1.getHardwares()[0].setCapacidade(3200);
         c1.getHardwares()[1].setNome("Memoria RAM");
@@ -52,6 +51,32 @@ public class Main {
         c3.getSistemaOperacional().setNome("Windows 10");
         c3.getSistemaOperacional().setTipo(64);
         c3.mostrarPcConfigs();
+
+
+        int opcao;
+
+        do {
+            System.out.println(" Digite a opção da promoção para adicionar ao carrinho: ");
+            System.out.println("1 - Promoção 1");
+            System.out.println("2 - Promoção 02");
+            System.out.println("3 - Promoção 03");
+            System.out.println("0 - Finalizar compra");
+            opcao = leitor.nextInt();
+
+            if (opcao < 0 || opcao > 3) {
+                System.out.println("Digito invalido!");
+                continue;
+            }
+
+            switch (opcao) {
+                case 1:
+
+            }
+
+        }while (opcao != 0);
+
+        cliente1.calcularTotalCompra();
+
 
 
 
