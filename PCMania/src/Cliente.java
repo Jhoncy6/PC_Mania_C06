@@ -1,22 +1,31 @@
 public class Cliente {
     private String nome;
     private String cpf;
-    private Computador[] computadores = new Computador[20];
+    private Computador[] computadores;
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
+        this.computadores = new Computador[20];
+    }
+
+    public void carinhoComputadores(Computador computador) {
+        for (int i = 0; i < this.computadores.length; i++) {
+            if (this.computadores[i] == null){
+                this.computadores[i] = computador;
+                break;
+            }
+        }
     }
 
     public float calcularTotalCompra(){
-
         float totalCompra = 0;
-        for (int i = 0; i < computadores.length; i++) {
-            if (computadores[i] != null){
-                totalCompra += computadores[i].getPreco();
+        for (int i = 0; i < this.computadores.length; i++) {
+            if (this.computadores[i] != null){
+                totalCompra += this.computadores[i].getPreco();
             }
         }
-        return ( System.out.println( nome + "O valor total da sua compra e de : " +  totalCompra);
+        return  totalCompra;
     }
 
 

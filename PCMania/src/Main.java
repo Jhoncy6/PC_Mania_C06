@@ -54,9 +54,8 @@ public class Main {
 
 
         int opcao;
-
         do {
-            System.out.println(" Digite a opção da promoção para adicionar ao carrinho: ");
+            System.out.println("Digite a opção da promoção para adicionar ao carrinho: ");
             System.out.println("1 - Promoção 1");
             System.out.println("2 - Promoção 02");
             System.out.println("3 - Promoção 03");
@@ -70,13 +69,20 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-
+                    cliente1.carinhoComputadores(c1);
+                    break;
+                case 2:
+                    cliente1.carinhoComputadores(c2);
+                    break;
+                case 3:
+                    cliente1.carinhoComputadores(c3);
+                    break;
             }
 
         }while (opcao != 0);
 
-        cliente1.calcularTotalCompra();
-
+        float total = cliente1.calcularTotalCompra();
+        System.out.println("Total de compras: " + total);
 
 
 
