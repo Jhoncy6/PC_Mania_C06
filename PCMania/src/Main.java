@@ -93,8 +93,5 @@ public class Main {
         float total = cliente1.calcularTotalCompra();
         System.out.println("Total de compras: " + total);
 
-
-
-
     }
 }
