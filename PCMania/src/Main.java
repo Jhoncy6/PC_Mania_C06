@@ -26,6 +26,8 @@ public class Main {
         c1.getHardwares()[2].setCapacidade(500);
         c1.getSistemaOperacional().setNome("macOs Sequoia");
         c1.getSistemaOperacional().setTipo(64);
+        MemoriaUSB m1 = new MemoriaUSB("Pen-Drive", 16);
+        c1.addMemoriaUsb(m1);
         c1.mostrarPcConfigs();
 
         System.out.println("================== Promoção 02 ===============");
@@ -38,6 +40,8 @@ public class Main {
         c2.getHardwares()[2].setCapacidade(1);
         c2.getSistemaOperacional().setNome("Windows 8");
         c2.getSistemaOperacional().setTipo(64);
+        MemoriaUSB m2 = new MemoriaUSB("Pen-Drive", 32);
+        c2.addMemoriaUsb(m2);
         c2.mostrarPcConfigs();
 
         System.out.println("================== Promoção 03 ===============");
@@ -50,6 +54,8 @@ public class Main {
         c3.getHardwares()[2].setCapacidade(2);
         c3.getSistemaOperacional().setNome("Windows 10");
         c3.getSistemaOperacional().setTipo(64);
+        MemoriaUSB m3 = new MemoriaUSB("Pen-Drive", 1024);
+        c3.addMemoriaUsb(m3);
         c3.mostrarPcConfigs();
 
 
@@ -57,8 +63,8 @@ public class Main {
         do {
             System.out.println("Digite a opção da promoção para adicionar ao carrinho: ");
             System.out.println("1 - Promoção 1");
-            System.out.println("2 - Promoção 02");
-            System.out.println("3 - Promoção 03");
+            System.out.println("2 - Promoção 2");
+            System.out.println("3 - Promoção 3");
             System.out.println("0 - Finalizar compra");
             opcao = leitor.nextInt();
 
@@ -80,7 +86,7 @@ public class Main {
             }
 
         }while (opcao != 0);
-
+        ProcessarPedido.enviarPedido(cliente1.getComputadores());
         float total = cliente1.calcularTotalCompra();
         System.out.println("Total de compras: " + total);
 

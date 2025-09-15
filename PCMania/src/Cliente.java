@@ -9,6 +9,11 @@ public class Cliente {
         this.computadores = new Computador[20];
     }
 
+
+    public Computador[] getComputadores() {
+        return computadores;
+    }
+
     public void carinhoComputadores(Computador computador) {
         for (int i = 0; i < this.computadores.length; i++) {
             if (this.computadores[i] == null){
@@ -17,6 +22,7 @@ public class Cliente {
             }
         }
     }
+
 
     public float calcularTotalCompra(){
         float totalCompra = 0;

@@ -25,6 +25,10 @@ public class Computador {
         return sistemaOperacional;
     }
 
+    public void addMemoriaUsb (MemoriaUSB musb){
+        this.memoriaUSB = musb;
+    }
+
     public void mostrarPcConfigs(){
         System.out.println("Marca: " + marca);
         System.out.println("Preço: " + preco);
@@ -34,6 +38,7 @@ public class Computador {
             }
         }
         System.out.println("Sistema operacional : " + sistemaOperacional.getNome() + "(" + sistemaOperacional.getTipo() + " bits)" );
+        System.out.println("Acompanha: " + memoriaUSB.getNome() + " de " + memoriaUSB.getCapacidade() + "Gb");
     }
 
 
