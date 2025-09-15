@@ -1,8 +1,10 @@
+package Computador;
+
 public class Computador {
     private String marca;
     private float preco;
     private MemoriaUSB memoriaUSB;
-    private SistemaOperacional sistemaOperacional = new  SistemaOperacional();
+    private SistemaOperacional sistemaOperacional = new SistemaOperacional();
     private HardwareBasico[] hardwares = new HardwareBasico[3];
 
     public Computador(String marca, float preco) {

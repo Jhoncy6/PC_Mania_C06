@@ -1,3 +1,6 @@
+import Computador.Computador;
+import Computador.MemoriaUSB;
+
 import java.util.Scanner;
 
 public class Main {
