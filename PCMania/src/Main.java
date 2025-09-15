@@ -17,7 +17,6 @@ public class Main {
         String c1Cpf = leitor.nextLine();
         Cliente cliente1 = new Cliente(c1Nome, c1Cpf);
         System.out.println("Olá " + c1Nome + " Abaixo está a nossa seleção de computadores na promoção!");
-        System.out.println("Para escolher as prmoções, basta digitar o número de cada uma. Se quiser sair digite 0 ");
 
         System.out.println("================== Promoção 01 ===============");
         Computador c1 = new Computador("Apple", 475);
@@ -76,6 +75,7 @@ public class Main {
                 continue;
             }
 
+
             switch (opcao) {
                 case 1:
                     cliente1.carinhoComputadores(c1);
@@ -89,7 +89,9 @@ public class Main {
             }
 
         }while (opcao != 0);
+
         ProcessarPedido.helper(cliente1.getComputadores());
+        cliente1.mostrarComputadores();
         float total = cliente1.calcularTotalCompra();
         System.out.println("Total de compras: " + total);
 

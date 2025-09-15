@@ -4,16 +4,19 @@ public class Computador {
     private String marca;
     private float preco;
     private MemoriaUSB memoriaUSB;
-    private SistemaOperacional sistemaOperacional = new SistemaOperacional();
-    private HardwareBasico[] hardwares = new HardwareBasico[3];
+    private SistemaOperacional sistemaOperacional;
+    private HardwareBasico[] hardwares;
 
     public Computador(String marca, float preco) {
         this.marca = marca;
         this.preco = preco;
-        for (int i = 0; i < hardwares.length; i++) {
-            hardwares[i] = new HardwareBasico();
+        this.sistemaOperacional = new  SistemaOperacional("", 0);
+        this.hardwares = new HardwareBasico[3];
+        for (int i = 0; i < this.hardwares.length; i++) {
+            this.hardwares[i] = new HardwareBasico("", 0);
         }
     }
+
 
     public float getPreco() {
         return preco;

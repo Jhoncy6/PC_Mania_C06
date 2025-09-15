@@ -4,9 +4,10 @@ public class SistemaOperacional {
     private String nome;
     private int tipo;
 
-
-
-    public SistemaOperacional(){}
+    public SistemaOperacional(String nome, int tipo) {
+        this.nome = nome;
+        this.tipo = tipo;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
