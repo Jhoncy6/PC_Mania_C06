@@ -27,7 +27,7 @@ public class Cliente {
 
     public void mostrarComputadores() {
         int numeroDaCompra = 0;
-        System.out.println("================== RESUMO DA COMPRA ===============");
+        System.out.println("=================== RESUMO DA COMPRA ================");
         System.out.println("Ola Cliente: " + nome + " com o cpf: " + cpf);
         for (int i = 0; i < this.computadores.length; i++) {
             if (this.computadores[i] != null){
