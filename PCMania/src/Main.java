@@ -89,7 +89,7 @@ public class Main {
             }
 
         }while (opcao != 0);
-        ProcessarPedido.enviarPedido(cliente1.getComputadores());
+        ProcessarPedido.helper(cliente1.getComputadores());
         float total = cliente1.calcularTotalCompra();
         System.out.println("Total de compras: " + total);
 
